@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ideas 2.0</title>
+    <title img="#">Ideas 2.0</title>
     <script src="https://kit.fontawesome.com/b339e8b91f.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -72,19 +72,24 @@
    </section>
 
    <section id="form-details">
-    <form action="">
+    
+    <form name="submit-to-google-sheet">
         <span>LEAVE A MESSAGE</span>
         <h2>We love to hear from you</h2>
-        <input type="text" placeholder="Your Name">
-        <input type="text" placeholder="E-mail">
-        <input type="text" placeholder="Subject">
-        <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
-        <button class="normal">Submit</button>
+        <input name="email" type="email" placeholder="Email" required>
+        <input name="Name" type="text" placeholder="Name">
+        <input name="subject" type="text" placeholder="Subject">
+        <textarea name="message" cols="30" rows="10" placeholder="Your Message"></textarea>
+        <button type="submit" class="normal">Send</button>
     </form>
+
+    <span id="msg"></span>
+    
+
     <div class="people">
         <div>
             <img src="img/ikubano.JPG" alt="">
-            <p><span>Derrick Ikubano</span>Senior Marketing Manager <br> Phone: +254 717 024 985 <br> Email: ikubanoderrick@gmail.com</p>
+            <p><span>Derrick Ikubano</span>Senior Marketing Manager <br> Phone: +254 113 206 085 <br> Email: ikubanoderrick@gmail.com</p>
         </div>
         
     </div>
@@ -149,8 +154,6 @@
         <p>&copy; 2024 Ideas2.0 - It's possible.</p>
       </div>
   </footer>
-
-
     <script src="script.js"></script>
 </body>
 </html>
