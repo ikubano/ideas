@@ -13,24 +13,16 @@ if (close) {
         nav.classList.remove('active');
     })
 }
-document.addEventListener('DOMContentLoaded', function() {
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbykNkaWwt_zgeLPHuYgE7reTv000jCzPAjlWPDkygtCIUMe2BEt85oMutAH1EKGPkL6/exec'
-    const form = document.forms['submit-to-google-sheet']
 
-    const msg = document.getElementById("msg")
+const scriptURL = 'https://script.google.com/macros/s/AKfycbykNkaWwt_zgeLPHuYgE7reTv000jCzPAjlWPDkygtCIUMe2BEt85oMutAH1EKGPkL6/exec'
 
-    form.addEventListener('submit', e => {
-        e.preventDefault()
-        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-            .then(response => {
-                msg.innerHTML = "Message was sent successfully. I'll Attend to you shortly!"
-                setTimeout(function (){
-                    msg.innerHTML = ""
-                },5000)
-                form.reset()
-            })
-            .catch(error => console.error('Error!', error.message))
-    })
+const form = document.forms['contact-form']
+
+form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, {method: 'POST', body: new FormData(form)})
+    .then(Response => alert("Message sent successfully! Thank you!"))
+    .then(() => { window.location.reload(); })
+    .catch(error => console.error('Error!', error.message))
 })
-
 
